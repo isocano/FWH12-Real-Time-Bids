@@ -59,6 +59,7 @@
 	  $('#bids-li').after(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
+	  $('#winner').html('The winner is ' + '<img src="http://graph.facebook.com/' + data.user + '/picture?type=square"/>');
 	  javascript_countdown.reset(60, 'javascript_countdown_time');
 	});
 	
@@ -121,6 +122,7 @@
 	function no_time_left() {
 		document.getElementById(output_element_id).innerHTML = no_time_left_message;
 		$('#bid').remove();
+		$('#winwin').click();
 	}
  
 	return {
@@ -159,3 +161,9 @@
 //time to countdown in seconds, and element ID
 javascript_countdown.init(60, 'javascript_countdown_time');
 </script>
+<a id="winwin" href="#" data-reveal-id="warning_modal" style="visibility: hidden;"></a>
+<div id="warning_modal" class="reveal-modal">
+	<h1>Bid is over!</h1>
+	<p id="winner"></p>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
