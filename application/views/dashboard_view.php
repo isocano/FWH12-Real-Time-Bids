@@ -6,8 +6,11 @@
 
 </div>
 
-<div class="row">
+<div class="row" style="min-height: 500px; min-width: 650px; background-color: white; border: 1px solid #7b7b7b; border-radius: 4px; margin-bottom: 15px;">
 
-	<div class="twelve columns" style="min-height: 500px; min-width: 650px; background-color: white; border: 1px solid #7b7b7b; border-radius: 4px; margin-bottom: 15px;";>
+	<div class="eight columns" style="color: #f6f6f6;";>
+
+		<p>Producto 1</p>
+	<div>
 
 </div>
