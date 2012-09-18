@@ -11,7 +11,8 @@
 ?>
 
 <div class="row">
-	<a href="#" id="bid">Bid</a>
+	<p>Puja acutal:</p><span id="actual_bid">10</span>
+	<a href="#" id="bid">10</a> + 5
 	<div class="twelve columns">
 		<ul id="bids">
 			<li id="bids-li"></li>
@@ -26,10 +27,12 @@
 	
 	channel.bind('my-event', function(data) {
 	  $('#bids-li').before(data.message);
+	  $('#actual_bid').html(data.message);
+	  $('#bid').html(data.message);
 	});
 	
 	$("#bid").click(function() {
-		var msg = $('#bid').html();
+		var msg = $('#bid').html() + 5;
   		$.ajax({
 		  type: "GET",
 		  url: base_url + "auction/push/" + msg,
