@@ -11,13 +11,30 @@
 ?>
 
 <div class="row">
-	<div id="javascript_countdown_time"></div>
-	<p>Puja acutal:</p><span id="actual_bid">10</span>
-	<a href="#" id="bid">10</a> + 5
+	<div class="six columns">
+		<!-- image -->
+		<div>
+			
+		</div>
+		<!-- description -->
+	</div>
+	<div class="six columns">
+		<!-- timer -->
+		<div id="javascript_countdown_time"></div>
+		<!-- button -->
+		<a href="#" id="bid">10</a> + 5
+		<!-- activity -->
+		<p>Puja acutal:</p><span id="actual_bid">10</span>
+	</div>
 	<div class="twelve columns">
 		<ul id="bids">
 			<li id="bids-li"></li>
 		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<!-- people -->
 	</div>
 </div>
 
