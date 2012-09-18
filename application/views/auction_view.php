@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="twelve columns">
 		<span id="price">10</span>
-		<input id="new-bid" type="button"/>
+		<a href="#" id="new-bid"/>
 		<ul id="bids">
 			<li id="bids-li"></li>
 		</ul>
@@ -9,7 +9,7 @@
 </div>
 
 <script>
-	var base_url = 'http://sldm.co/index.php/';
+	var base_url = 'http://sldm.co/';
 
 	var pusher = new Pusher('131de32e0bed65790199');
 	var channel = pusher.subscribe('my-channel');
