@@ -1,6 +1,6 @@
 <div class="row" style="margin-top: 15px;">
 
-	<div class="five columns"><a href="#" style="color: white;"><p>Logo<p></div>
+	<div class="five columns"><a href="#"><img src="https://dl.dropbox.com/u/35700385/livebidr/logo-mini.png"></a></div>
 	<div class="seven columns" style="text-align: right;"><a href="#" style="color: white;">Add new auction</a></div>
 	
 
