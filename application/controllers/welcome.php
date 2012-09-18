@@ -10,6 +10,13 @@ class Welcome extends CI_Controller {
 		$this->load->library(array('feisbus'));
 	}
 	
+	private function _create_session_variables ($user_id, $fb_id, $fb_username)
+	{
+		$this->session->set_userdata('user_id', $user_id);
+		$this->session->set_userdata('fb_id', $fb_id);
+		$this->session->set_userdata('fb_username', $fb_username);
+	}
+	
 	private function _access()
 	{
 		// Checks if the user is logged in Facebook
@@ -26,6 +33,8 @@ class Welcome extends CI_Controller {
 															  $user_data['last_name'],
 															  $this->feisbus->get_user_id(), 
 															  $user_data['username']);
+															  
+					$this->_create_session_variables($user_id, $this->feisbus->get_user_id(), $user_data['username']);
 															  
 					header('location: ' . $this->config->item('base_url') . 'dashboard');
 				}
