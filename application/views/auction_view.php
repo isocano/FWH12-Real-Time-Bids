@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="twelve columns">
 		<span id="price">10</span>
-		<a href="#" id="new-bid"/>
+		<a href="#" id="new-bid"/></a>
 		<ul id="bids">
 			<li id="bids-li"></li>
 		</ul>

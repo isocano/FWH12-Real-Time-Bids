@@ -12,6 +12,7 @@ class Auction extends CI_Controller {
 	
 	public function push ($message)
 	{
+		echo 'hi ' . $message;
 		$key = '131de32e0bed65790199';
 		$secret = '69d5b8a4d4f0696b3c7a';
 		$app_id = '27903';
