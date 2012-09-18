@@ -10,9 +10,9 @@
 		
 	<div>
 	<br/><br/>
-	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;";>
+	<!--<div class="eight columns" style="background-color: #f6f6f6; text-align: center;";>
 		<h5 style="display: inline;">Hello <?php echo $first_name?></h5>
 		<img src="<?php echo "http://graph.facebook.com/$user_id/picture?type=square";?>"/>
-	</div>
+	</div>-->
 	<br/>
 </div>
