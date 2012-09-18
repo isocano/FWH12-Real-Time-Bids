@@ -116,5 +116,5 @@
 }();
  
 //time to countdown in seconds, and element ID
-javascript_countdown.init(3673, 'javascript_countdown_time');
+javascript_countdown.init(60, 'javascript_countdown_time');
 </script>
