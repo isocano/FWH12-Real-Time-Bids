@@ -85,6 +85,9 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php echo $resources;?>css/core.css">
+	
+	<!-- Pusher -->
+	<script src="http://js.pusher.com/1.12/pusher.min.js"></script>
 
 </head>
 <body>
