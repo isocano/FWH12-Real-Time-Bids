@@ -26,7 +26,7 @@ class Dashboard extends CI_Controller {
 		
 		$dash_data['first_name'] = $user_data->NAME;
 		$dash_data['last_name'] = $user_data->LAST_NAME;
-		$dash_data['username'] = $this->config->item('fb_username');
+		$dash_data['user_id'] = $this->feisbus->get_user_id();
 		
 				
 		$this->load->view('templates/head', $data);
