@@ -11,6 +11,9 @@
 ?>
 
 <div class="row" style="margin-top:2em;">
+	<div style="display:none;">
+		<a href="#" id="warning">fdafhdkahfjkdahfjkdahfkjdhafjkdsahk</a>
+	</div>
 	<div class="six columns">
 		<!-- image -->
 		<div style="margin-bottom: 2em;">
@@ -64,6 +67,10 @@
 		  url: base_url + "auction/push/" + msg,
 		}).done(function( msg ) {
 		});
+	});
+	
+	$('#warning').click(function () {
+		pusher.disconnect();
 	});
 </script>
 
