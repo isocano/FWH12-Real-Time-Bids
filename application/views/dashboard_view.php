@@ -1,7 +1,7 @@
 <div class="row" style="margin-top: 15px;">
 
 	<div class="five columns"><a href="#"><img src="https://dl.dropbox.com/u/35700385/livebidr/logo-mini.png" style="margin-bottom: 15px;"></a></div>
-	<div class="seven columns" style="text-align: right;"><a href="#" style="color: white;">Add new auction</a></div>
+	<div class="seven columns" style="text-align: right;"><a href="<?php echo $this->config->item->('base_url') ?>auction/add" style="color: white;">Add new auction</a></div>
 	
 
 </div>
