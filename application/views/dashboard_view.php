@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;">
 		<p>Hello <?php echo $first_name?></p>
-		<img src="<?php echo "http://graph.facebook.com/$user_id/picture?type=square";?>"
+		<img src="<?php echo "http://graph.facebook.com/$user_id/picture?type=square";?>"/>
 	<div>
 </div>
 <div class="row" style="min-height: 500px; min-width: 650px; background-color: white; border: 1px solid #7b7b7b; border-radius: 4px; margin-bottom: 15px;">
