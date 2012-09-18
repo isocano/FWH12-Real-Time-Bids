@@ -22,6 +22,7 @@
 <script>
 	var pusher = new Pusher('131de32e0bed65790199'); // Replace with your app key
 	var channel = pusher.subscribe('my-channel');
+	var base_url = 'http://sldm.co/';
 	
 	channel.bind('my-event', function(data) {
 	  $('#bids-li').before(data.message);
