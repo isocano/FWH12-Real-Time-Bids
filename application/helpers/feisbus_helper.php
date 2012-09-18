@@ -6,10 +6,14 @@
 		$result = NULL;
 		
 		if ($fb->get_user_id())
+		{
 			$result = $fb->execute_fql("select username, first_name, last_name, current_location, 
 										  sex, relationship_status, birthday_date,
 										  email, hometown_location from user where uid=" . $fb->get_user_id());
-				
+		
+			$result = $result[0];								  
+		}
+								  
 		return $result;
 	}
 	
