@@ -31,7 +31,7 @@ class Auction extends CI_Controller {
 	public function index() 
 	{
 			// https://github.com/squeeks/Pusher-PHP
-		require('/var/www/html/FWH12-Real-Time-Bids/application/libraries/Pusher/lib/Pusher.php');
+		require('/var/www/html/application/libraries/Pusher/lib/Pusher.php');
 	
 		$data ['title'] = 'live bidr | Auction';
 		$data ['description'] = '';
