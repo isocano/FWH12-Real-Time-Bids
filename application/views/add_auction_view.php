@@ -7,13 +7,13 @@
   <input type="text" class="twelve" placeholder="Street" />
   <div class="row">
     <div class="six columns">
-      <input type="text" placeholder="City" />
+      <input type="text" placeholder="Nombre" />
     </div>
     <div class="three columns">
-      <input type="text" placeholder="State" />
+      <input type="text" placeholder="Precio" />
     </div>
     <div class="three columns">
-      <input type="text" placeholder="ZIP" />
+      <input type="text" placeholder="Descripción" />
     </div>
   </div>  
 </form>  
