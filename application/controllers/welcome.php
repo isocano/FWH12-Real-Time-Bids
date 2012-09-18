@@ -6,7 +6,7 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model(array('user_model'));
-		$this->load->helper(array('url'));
+		$this->load->helper(array('url', 'feisbus'));
 		$this->load->library(array('feisbus'));
 	}
 	
