@@ -7,17 +7,37 @@
 	$app_id = '27903';
 
 	$pusher = new Pusher($key, $secret, $app_id);
-	$pusher->trigger('my-channel', 'my-event', array('message' => 'hello world') );
+	//$pusher->trigger('my-channel', 'my-event', array('message' => 'hello world') );
 ?>
 
 <div class="row">
-	<div id="javascript_countdown_time"></div>
-	<p>Puja acutal:</p><span id="actual_bid">10</span>
-	<a href="#" id="bid">10</a> + 5
-	<div class="twelve columns">
+	<div class="six columns">
+		<!-- image -->
+		<div>
+			<img src="<?php echo $image; ?>"/>
+		</div>
+		<!-- description -->
+		<div>
+			<?php echo $description; ?>
+		</div>
+	</div>
+	<div class="six columns">
+		<!-- timer -->
+		<div id="javascript_countdown_time"></div>
+		<!-- button -->
+		<a href="#" class="button" id="bid">10</a> + 5
+		<!-- activity -->
+		<span>Puja acutal:</span><span id="actual_bid">10</span>
+	</div>
+	<div class="twelve columns panel">
 		<ul id="bids">
 			<li id="bids-li"></li>
 		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<!-- people -->
 	</div>
 </div>
 
@@ -27,9 +47,12 @@
 	var base_url = 'http://sldm.co/';
 	
 	channel.bind('my-event', function(data) {
-	  $('#bids-li').before(data.message);
+		var user = <?php echo $this->session->userdata('fb_username'); ?>
+		var b = '<p>' + data.message + ' € de ' + user + '</p>';
+	  $('#bids-li').before(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
+	  javascript_countdown.reset(60, 'javascript_countdown_time');
 	});
 	
 	$("#bid").click(function() {
@@ -47,7 +70,7 @@
 	var time_left = 10; //number of seconds for countdown
 	var output_element_id = 'javascript_countdown_time';
 	var keep_counting = 1;
-	var no_time_left_message = 'No time left for JavaScript countdown!';
+	var no_time_left_message = 'Puja terminada!!!';
  
 	function countdown() {
 		if(time_left < 2) {
@@ -84,6 +107,7 @@
  
 	function no_time_left() {
 		document.getElementById(output_element_id).innerHTML = no_time_left_message;
+		$('#bid').remove();
 	}
  
 	return {
@@ -111,6 +135,10 @@
 			time_left = t;
 			output_element_id = element_id;
 			javascript_countdown.timer();
+		},
+		reset: function (t, element_id) {
+			time_left = t;
+			output_element_id = element_id;
 		}
 	};
 }();
