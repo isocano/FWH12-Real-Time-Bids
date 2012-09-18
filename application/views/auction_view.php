@@ -17,26 +17,23 @@
 			<img src="<?php echo $image; ?>"/>
 		</div>
 		<!-- description -->
-		<div style="margin-bottom: 2em;">
+		<div class="panel" style="margin-bottom: 2em;">
 			<?php echo $description; ?>
 		</div>
 	</div>
 	<div class="six columns">
 		<!-- timer -->
-		<div id="javascript_countdown_time" style="margin-bottom: 2em;font-size: 37px;color:red;padding: 2em;
-border-radius: 4px;
-background-color: #F7F7F7;
-text-align: center;"></div>
+		<div id="javascript_countdown_time" style="margin-bottom: 0.5em;font-size: 37px;color:red;padding: 2em;border-radius: 4px;background-color: #F7F7F7;text-align: center;"></div>
 		<!-- button -->
-		<a href="#" class="button" id="bid" style="font-size:22px;">10</a> <span style="font-size:22px;">+ 2 €</span>
+		<a href="#" class="button" id="bid" style="margin-bottom: 0.5em;font-size:22px;">10</a> <span style="font-size:22px;">+ 2 €</span>
+		<div class="panel">
+			<ul id="bids">
+				<li id="bids-li"></li>
+			</ul>
+		</div>
 		<br/>
 		<!-- activity -->
 		<span style="font-size: 22px;">Bids:</span><span id="actual_bid" style="font-size: 22px;">10</span>€
-	</div>
-	<div class="twelve columns panel">
-		<ul id="bids">
-			<li id="bids-li"></li>
-		</ul>
 	</div>
 </div>
 <div class="row">
