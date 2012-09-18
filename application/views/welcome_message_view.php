@@ -6,7 +6,7 @@
 		</div>
 		
 		<div class="twelve columns centered" style="text-align: center;">
-		<?php if ( ! $this->session->userdata('user_id')) { ?>
+		<?php if ($this->session->userdata('user_id') == NULL) { ?>
 	    	<?php echo $this->feisbus->get_login_button(TRUE, 'xlarge'); ?>
 	    <?php } ?>  
 	    <?php echo $this->feisbus->load_javascript_SDK(); ?>
