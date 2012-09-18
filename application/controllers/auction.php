@@ -12,6 +12,7 @@ class Auction extends CI_Controller {
 	
 	public function push ($message)
 	{
+		/*require('/var/www/html/application/libraries/Pusher/lib/Pusher.php');
 		echo 'hi ' . $message;
 		$key = '131de32e0bed65790199';
 		$secret = '69d5b8a4d4f0696b3c7a';
@@ -19,7 +20,7 @@ class Auction extends CI_Controller {
 		
 		$pusher = new Pusher($key, $secret, $app_id);
 		
-		$pusher->trigger('my-channel', 'my-event', array('message' => "$message") );
+		$pusher->trigger('my-channel', 'my-event', array('message' => "$message") );*/
 	}
 	
 	/**
@@ -32,7 +33,7 @@ class Auction extends CI_Controller {
 	public function index() 
 	{
 			// https://github.com/squeeks/Pusher-PHP
-		require('/var/www/html/application/libraries/Pusher/lib/Pusher.php');
+		
 	
 		$data ['title'] = 'live bidr | Auction';
 		$data ['description'] = '';

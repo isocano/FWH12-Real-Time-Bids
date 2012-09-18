@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="twelve columns">
 		<span id="price">10</span>
-		<a href="#" id="new-bid"/></a>
+		<a href="#" id="new-bid"/>
 		<ul id="bids">
 			<li id="bids-li"></li>
 		</ul>
@@ -15,7 +15,7 @@
 	var channel = pusher.subscribe('my-channel');
 	
 	channel.bind('my-event', function(data) {
-	  alert('An event was triggered with message: ' + data.message);
+	  //alert('An event was triggered with message: ' + data.message);
 	  $('#bids-li').before(data.message);
 	});
 	
