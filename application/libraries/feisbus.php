@@ -5,10 +5,10 @@ require_once 'facebook.php';
  * Clase para facilitar el trabajo con Facebook. 
  */
 class Feisbus {
-    const APP_ID   = '295932183816944';
-    const SECRET   = 'f828abc43d7ae756af359767200a4dac';
-	const BASE_URL = 'http://www.saldum.net/';
-	const APP_NAMESPACE = 'saldumapp';	 
+    const APP_ID   = '518596724832653';
+    const SECRET   = '6564b7d4858d99eccf3e1128fd5808b4';
+	const BASE_URL = 'http://www.sldm.co/';
+	const APP_NAMESPACE = 'real_time_bids';	 
 		 
     private $fb;			//Instancia de la clase oficial de Facebook
 	private $user;			//Usuario logueado en la aplicación
@@ -53,29 +53,13 @@ class Feisbus {
 		if ($size == NULL)
 			$size = "small";
 		
-		//TODO volver a poner el mensaje en inglés
-        $scope = 'offline_access,
-                  publish_stream,
+        $scope = 'publish_stream,
                   read_friendlists,
-	              user_checkins,
 				  email, 
-	              user_birthday,
-	              user_location,
 	              user_about_me,
-	              user_hometown,
-	              user_education_history,
 	              user_likes,
 	              user_activities,
-	              user_interests,
-	              friends_likes,
-	              friends_about_me,
-	              friends_birthday,
-	              friends_hometown,
-	              friends_relationships,
-	              friends_activities,
-	              friends_interests,
-	              friends_location,
-	              friends_checkins';
+	              user_interests';
 		
 		if ($login)	
 			return 
@@ -87,14 +71,6 @@ class Feisbus {
 				'<fb:login-button autologoutlink="true">
 				</fb:login-button>';
 	}
-	
-	/*function get_logout_button() 
-	{
-		return 
-				'<div class="fb-login-button" autologoutlink="true" onclick="FB.logout();">
-			    	Salir
-			    </div>';
-	}*/
 
 	function get_login_url($params = NULL) 
 	{
