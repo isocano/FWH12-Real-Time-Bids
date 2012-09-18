@@ -47,7 +47,8 @@
 	var base_url = 'http://sldm.co/';
 	
 	channel.bind('my-event', function(data) {
-		var b = '<p>' + data.message + '</p>';
+		var user = <?php $this->session->userdata('fb_username'); ?>
+		var b = '<p>' + data.message + ' € de ' + user + '</p>';
 	  $('#bids-li').before(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
