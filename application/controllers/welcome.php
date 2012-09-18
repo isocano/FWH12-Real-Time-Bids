@@ -19,6 +19,8 @@ class Welcome extends CI_Controller {
 	
 	private function _access()
 	{
+		$user_data = NULL;
+		
 		// Checks if the user is logged in Facebook
 		if ($this->feisbus->get_user_id())
 		{
@@ -48,7 +50,7 @@ class Welcome extends CI_Controller {
 				$this->_create_session_variables($user_data->ID, $this->feisbus->get_user_id(), $user_data->FB_USERNAME);
 			}
 			
-			header('location: ' . $this->config->item('base_url') . 'dashboard');
+			header('location: ' . $this->config->item('base_url') . 'dashboard/' . $user_data->FB_USERNAME);
 		}
 	}
 
