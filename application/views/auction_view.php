@@ -30,6 +30,7 @@
 	  $('#bids-li').before(data.message);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
+	  javascript_countdown.init(60, 'javascript_countdown_time');
 	});
 	
 	$("#bid").click(function() {
