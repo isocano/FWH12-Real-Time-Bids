@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://sldm.co/FWH12-Real-Time-Bids/index.php/';
 
 /*
 |--------------------------------------------------------------------------
