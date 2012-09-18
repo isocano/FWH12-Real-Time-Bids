@@ -1,6 +1,6 @@
 <?php 
 	// https://github.com/squeeks/Pusher-PHP
-	require('/var/www/html/FWH12-Real-Time-Bids/application/libraries/Pusher/lib/Pusher.php');
+	require('/var/www/html/application/libraries/Pusher/lib/Pusher.php');
 
 	$key = '131de32e0bed65790199';
 	$secret = '69d5b8a4d4f0696b3c7a';
