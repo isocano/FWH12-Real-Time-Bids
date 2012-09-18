@@ -10,7 +10,7 @@ class User_model extends CI_Model {
 	/*------------------------------ CREATE FUNCTIONS ---------------------------*/
 	
 	// Insert an user in the DB
-	function insert_user($name, $last_name, $phone, $fb_id, $username)
+	function insert_user($name, $last_name, $fb_id, $username)
 	{
 		$data = array(
 			'NAME'		=>	$name,
