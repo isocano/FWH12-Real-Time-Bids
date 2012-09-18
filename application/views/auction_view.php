@@ -7,7 +7,7 @@
 	$app_id = '27903';
 
 	$pusher = new Pusher($key, $secret, $app_id);
-	$pusher->trigger('my-channel', 'my-event', array('message' => 'hello world') );
+	//$pusher->trigger('my-channel', 'my-event', array('message' => 'hello world') );
 ?>
 
 <div class="row">
