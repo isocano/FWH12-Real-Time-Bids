@@ -30,7 +30,7 @@
 	  $('#bids-li').before(data.message);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
-	  javascript_countdown.init(60, 'javascript_countdown_time');
+	  javascript_countdown.reset(60, 'javascript_countdown_time');
 	});
 	
 	$("#bid").click(function() {
@@ -112,6 +112,10 @@
 			time_left = t;
 			output_element_id = element_id;
 			javascript_countdown.timer();
+		},
+		reset: function (t, element_id) {
+			time_left = t;
+			output_element_id = element_id;
 		}
 	};
 }();
