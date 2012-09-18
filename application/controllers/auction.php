@@ -98,7 +98,7 @@ class Auction extends CI_Controller {
 	 */
 	public function index() 
 	{
-		$data_auction['image'] = "http://sldm.co/data/lot/1/photo.JPG";
+		$data_auction['image'] = "http://sldm.co/data/lot/1/globe.png";
 		$data_auction['description'] = "Awesome World Globe that will look great in your office. What a better proof that these to show your colleagues and clients that you were Hacking in Barcelona?";
 		
 		$data ['title'] = 'live bidr | Auction';

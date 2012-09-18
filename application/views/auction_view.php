@@ -25,7 +25,7 @@
 		<!-- timer -->
 		<div id="javascript_countdown_time" style="margin-bottom: 2em;font-size: 37px;color:red;padding: 2em;
 border-radius: 4px;
-background-color: black;
+background-color: #F7F7F7;
 text-align: center;"></div>
 		<!-- button -->
 		<a href="#" class="button" id="bid" style="font-size:22px;">10</a> <span style="font-size:22px;">+ 2 €</span>
