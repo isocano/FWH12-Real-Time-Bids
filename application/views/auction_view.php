@@ -48,7 +48,7 @@
 	var time_left = 10; //number of seconds for countdown
 	var output_element_id = 'javascript_countdown_time';
 	var keep_counting = 1;
-	var no_time_left_message = 'No time left for JavaScript countdown!';
+	var no_time_left_message = 'Puja terminada!!!';
  
 	function countdown() {
 		if(time_left < 2) {
@@ -85,6 +85,7 @@
  
 	function no_time_left() {
 		document.getElementById(output_element_id).innerHTML = no_time_left_message;
+		$('#bid').remove();
 	}
  
 	return {
