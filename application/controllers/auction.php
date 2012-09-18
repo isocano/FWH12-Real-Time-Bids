@@ -41,12 +41,15 @@ class Auction extends CI_Controller {
 	 */
 	public function index() 
 	{
+		$data_auction['image'] = "";
+		$data_auction['description'] = "Mueble de 2º mano";
+		
 		$data ['title'] = 'live bidr | Auction';
 		$data ['description'] = '';
 		
 		$this->load->view('templates/head', $data);
 		$this->load->view('templates/header');
-		$this->load->view('auction_view.php');
+		$this->load->view('auction_view.php', $data_auction);
 		$this->load->view('templates/footer');
 	}
 }

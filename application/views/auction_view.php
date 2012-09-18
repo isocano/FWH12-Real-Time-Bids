@@ -14,19 +14,22 @@
 	<div class="six columns">
 		<!-- image -->
 		<div>
-			
+			<img src="<?php echo $image; ?>"/>
 		</div>
 		<!-- description -->
+		<div>
+			<?php echo $description; ?>
+		</div>
 	</div>
 	<div class="six columns">
 		<!-- timer -->
 		<div id="javascript_countdown_time"></div>
 		<!-- button -->
-		<a href="#" id="bid">10</a> + 5
+		<a href="#" class="button" id="bid">10</a> + 5
 		<!-- activity -->
-		<p>Puja acutal:</p><span id="actual_bid">10</span>
+		<span>Puja acutal:</span><span id="actual_bid">10</span>
 	</div>
-	<div class="twelve columns">
+	<div class="twelve columns panel">
 		<ul id="bids">
 			<li id="bids-li"></li>
 		</ul>
