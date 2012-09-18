@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Storefront extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	function __construct() 
 	{
@@ -75,5 +75,5 @@ class Storefront extends CI_Controller {
 	}
 }
 
-/* End of file storefront.php */
-/* Location: ./controllers/storefront.php */
+/* End of file dashboard.php */
+/* Location: ./controllers/dashboard.php */
