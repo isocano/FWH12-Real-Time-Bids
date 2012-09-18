@@ -11,9 +11,10 @@
 ?>
 
 <div class="row">
+	<a href="#" id="bid">Bid</a>
 	<div class="twelve columns">
 		<ul id="bids">
-			<li>fdafdsaf</li>
+			<li id="bids-li"></li>
 		</ul>
 	</div>
 </div>
@@ -23,6 +24,15 @@
 	var channel = pusher.subscribe('my-channel');
 	
 	channel.bind('my-event', function(data) {
-	  alert('An event was triggered with message: ' + data.message);
+	  $('#bids-li').before(data.message);
+	});
+	
+	$("#bid").click(function() {
+		var msg = $('#bid').html();
+  		$.ajax({
+		  type: "GET",
+		  url: base_url + "auction/push/" + msg,
+		}).done(function( msg ) {
+		});
 	});
 </script>

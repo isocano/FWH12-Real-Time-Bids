@@ -61,7 +61,6 @@ class Welcome extends CI_Controller {
 		
 		$this->load->view('templates/header');
 		$this->load->view('welcome_message_view.php');
-		$this->load->view('templates/footer');
 	}
 }
 
