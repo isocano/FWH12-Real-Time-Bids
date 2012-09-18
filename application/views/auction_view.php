@@ -9,6 +9,8 @@
 </div>
 
 <script>
+	var base_url = 'http://sldm.co/index.php/';
+
 	var pusher = new Pusher('131de32e0bed65790199');
 	var channel = pusher.subscribe('my-channel');
 	
