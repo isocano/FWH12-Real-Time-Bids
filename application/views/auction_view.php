@@ -27,8 +27,9 @@
 		<!-- button -->
 		<a href="#" class="button" id="bid" style="margin-bottom: 0.5em;font-size:22px;">5</a> <span style="font-size:22px;">+ 2 €</span>
 		<span class="panel"><span style="font-size: 22px;">Bids:</span><span id="actual_bid" style="font-size: 22px;">5</span>€</span>
-		<div class="panel">
+		<div class="panel" style="min-height: 400px;">
 			<ul id="bids">
+				<h1>Bids</h1>
 				<li id="bids-li"></li>
 			</ul>
 		</div>
