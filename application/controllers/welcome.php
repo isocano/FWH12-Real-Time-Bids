@@ -35,10 +35,15 @@ class Welcome extends CI_Controller {
 															  $user_data['username']);
 															  
 					$this->_create_session_variables($user_id, $this->feisbus->get_user_id(), $user_data['username']);
-															  
-					header('location: ' . $this->config->item('base_url') . 'dashboard');
 				}
 			}
+			else 
+			{
+				$user_data = $this->user_model->get_user($this->feisbus->get_user_id());
+				$this->_create_session_variables($user_data->ID, $this->feisbus->get_user_id(), $user_data->FB_USERNAME);
+			}
+			
+			header('location: ' . $this->config->item('base_url') . 'dashboard');
 		}
 	}
 
