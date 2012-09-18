@@ -25,7 +25,7 @@ class Dashboard extends CI_Controller {
 		$user_data = $this->user_model->get_user($this->feisbus->get_user_id());
 		
 		$dash_data['first_name'] = $user_data->NAME;
-		$dash_data['last_name'] = $user_data->LAST_NAME;
+		//$dash_data['last_name'] = $user_data->LAST_NAME;
 		$dash_data['user_id'] = $this->feisbus->get_user_id();
 		
 				
