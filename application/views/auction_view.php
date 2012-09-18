@@ -10,24 +10,25 @@
 	//$pusher->trigger('my-channel', 'my-event', array('message' => 'hello world') );
 ?>
 
-<div class="row">
+<div class="row" style="margin-top:2em;">
 	<div class="six columns">
 		<!-- image -->
-		<div>
+		<div style="margin-bottom: 2em;">
 			<img src="<?php echo $image; ?>"/>
 		</div>
 		<!-- description -->
-		<div>
+		<div style="margin-bottom: 2em;">
 			<?php echo $description; ?>
 		</div>
 	</div>
 	<div class="six columns">
 		<!-- timer -->
-		<div id="javascript_countdown_time"></div>
+		<div id="javascript_countdown_time" style="margin-bottom: 2em;font-size: 37px;color:red;"></div>
 		<!-- button -->
 		<a href="#" class="button" id="bid">10</a> + 5
+		<br/>
 		<!-- activity -->
-		<span>Puja acutal:</span><span id="actual_bid">10</span>
+		<span style="font-size: 22px;">Puja acutal:</span><span id="actual_bid" style="font-size: 22px;">10</span>€
 	</div>
 	<div class="twelve columns panel">
 		<ul id="bids">
@@ -49,7 +50,7 @@
 	channel.bind('my-event', function(data) {
 		var user = '<?php echo $this->session->userdata('fb_username'); ?>';
 		var b = '<p>' + data.message + ' € de ' + user + '</p>';
-	  $('#bids-li').before(b);
+	  $('#bids-li').after(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
 	  javascript_countdown.reset(60, 'javascript_countdown_time');
