@@ -47,7 +47,8 @@
 	var base_url = 'http://sldm.co/';
 	
 	channel.bind('my-event', function(data) {
-	  $('#bids-li').before(data.message);
+		var b = '<p>' + data.message + '</p>';
+	  $('#bids-li').before(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
 	  javascript_countdown.reset(60, 'javascript_countdown_time');
