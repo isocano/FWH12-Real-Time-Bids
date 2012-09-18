@@ -10,7 +10,7 @@
 
 	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;";>
 
-		<p>Product 1</p>
+		<a href="/auction"><p style="font-size: 22px;">Awesome World Globe</p></a>
 		
 	<div>
 		
