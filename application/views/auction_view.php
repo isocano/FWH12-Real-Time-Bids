@@ -26,14 +26,13 @@
 		<div id="javascript_countdown_time" style="margin-bottom: 0.5em;font-size: 37px;color:red;padding: 2em;border-radius: 4px;background-color: #F7F7F7;text-align: center;"></div>
 		<!-- button -->
 		<a href="#" class="button" id="bid" style="margin-bottom: 0.5em;font-size:22px;">5</a> <span style="font-size:22px;">+ 2 €</span>
-		<span class="panel"><span style="font-size: 22px;">Bids:</span><span id="actual_bid" style="font-size: 22px;">5</span>€</span>
-		<div class="panel" style="min-height: 400px;">
+		<span class="panel"><span style="font-size: 22px;float:right;">Bids:</span><span id="actual_bid" style="font-size: 22px;">5</span>€</span>
+		<div class="panel" style="min-height: 400px;margin-top: 2em;">
 			<ul id="bids">
 				<h1>Bids</h1>
 				<li id="bids-li"></li>
 			</ul>
 		</div>
-		<br/>
 		<!-- activity -->
 		
 	</div>
