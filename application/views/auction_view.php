@@ -54,7 +54,7 @@
 	channel.bind('my-event', function(data) {
 		//var user = '<?php echo $this->session->userdata('fb_username'); ?>';
 		 var user = '<?php echo $this->feisbus->get_user_id(); ?>';
-		var b = '<p>' + <?php echo '<img src="http://graph.facebook.com/"'; ?> + data.user + "/picture?type=square" + ' bids ' + data.message + ' €</p>';
+		var b = '<p><img src="http://graph.facebook.com/"' + data.user + "/picture?type=square/>" + ' bids ' + data.message + ' €</p>';
 		
 	  $('#bids-li').after(b);
 	  $('#actual_bid').html(data.message);
