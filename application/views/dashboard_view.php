@@ -8,6 +8,6 @@
 
 <div class="row">
 
-	<div class="twelve columns" style="min-height: 500px; min-width: 650px";>
+	<div class="twelve columns" style="min-height: 500px; min-width: 650px; background-color: white; border: 1px solid black;";>
 
 </div>
