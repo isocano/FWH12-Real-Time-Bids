@@ -9,13 +9,10 @@
 		<img src="http://sldm.co/data/lot/1/globe.png" width="250"/> 
 		
 	<div>
-		
+	<br/><br/>
 	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;";>
-		<p>Hello <?php echo $first_name?></p>
+		<h5>Hello <?php echo $first_name?></h5>
 		<img src="<?php echo "http://graph.facebook.com/$user_id/picture?type=square";?>"/>
 	</div>
 	<br/>
-	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;">
-		<a href="/auction"><p style="font-size: 22px;">Awesome World Globe</p></a>
-	<div>
 </div>
