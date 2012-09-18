@@ -13,5 +13,12 @@
 		<p>Producto 1</p>
 		
 	<div>
+		
+	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;";>
+
+		<p>Hello <?php echo $first_name . ' ' . $last_name;?></p>
+		<img src="<?php echo "http://graph.facebook.com/$username/picture?type=square";?>"
+		
+	<div>
 
 </div>

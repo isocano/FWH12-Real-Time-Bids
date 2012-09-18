@@ -22,9 +22,16 @@ class Dashboard extends CI_Controller {
 		$data ['title'] = 'live bidr | Dashboard';
 		$data ['description'] = '';
 		
+		$user_data = $this->user_model->get_user($this->config->item('fb_id'));
+		
+		$dash_data['first_name'] = $user_data->NAME;
+		$dash_data['last_name'] = $user_data->LAST_NAME;
+		$dash_data['username'] = $this->config->item('fb_username');
+		
+				
 		$this->load->view('templates/head', $data);
 		$this->load->view('templates/header');
-		$this->load->view('dashboard_view.php');
+		$this->load->view('dashboard_view.php', $dash_data);
 	}
 }
 
