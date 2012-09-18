@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="twelve columns">
 		<h1>Welcome to Livebidr!</h1>
-		<div class="twelve columns centered" style="text-align: center;">
+		<div class="twelve columns centered" style="text-align: center; margin-top: 100px; margin-bottom: 25px;">
 			<a href="#"><img src="https://dl.dropbox.com/u/35700385/livebidr/logo.png"></a>
 		</div>
 		
