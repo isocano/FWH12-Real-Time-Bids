@@ -34,6 +34,11 @@ class Welcome extends CI_Controller {
 															  $this->feisbus->get_user_id(), 
 															  $user_data['username']);
 															  
+					// Create the folder to the user images for products
+					mkdir($this->config->item('upload_user_photo') . $user_id, 0777);
+					mkdir($this->config->item('upload_user_photo') . $user_id . '/tmp', 0777);
+					mkdir($this->config->item('upload_user_photo') . $user_id . '/tmp/thumbnails', 0777);
+															  
 					$this->_create_session_variables($user_id, $this->feisbus->get_user_id(), $user_data['username']);
 				}
 			}

@@ -40,6 +40,10 @@ $config['resources'] = $config['base_url'] . 'assets/';
 
 $config['resources_plugin'] = $config['base_url'] . 'assets/plugin/';
 
+$config['upload_user_photo'] = './data/user_photo/';
+
+$config['upload_lot_photo'] = './data/lot/';  
+
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

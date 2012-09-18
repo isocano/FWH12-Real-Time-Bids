@@ -10,12 +10,13 @@ class Lot_model extends CI_Model {
 	/*------------------------------ CREATE FUNCTIONS ---------------------------*/
 	
 	// Insert an lot in the DB
-	function insert_lot($price, $description, $auction)
+	function insert_lot($name, $price, $description, $user)
 	{
 		$data = array(
+			'NAME'			=>	$name,
 			'PRICE'			=>	$price,
-			'DESCRIPTION'		=>	$description,
-			'AUCTION'		=>	$auction, 
+			'DESCRIPTION'	=>	$description,
+			'USER'			=>	$user
 		);
 		
 		$this->db->insert ('lot', $data);
@@ -55,6 +56,13 @@ class Lot_model extends CI_Model {
 		return $query->row();
 	}
 	
+	/*------------------------------ UPDATE FUNCTIONS ---------------------------*/
+	
+	function update_lot ($user_id, $user_data)
+	{
+		$this->db->where('USER', $user_id);
+		$this->db->update('user', $user_data);
+	}
 }
 
 /* End of file lot_model.php */
