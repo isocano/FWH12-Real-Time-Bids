@@ -28,7 +28,7 @@ class User_model extends CI_Model {
 	// Get user
 	function get_user($fb_id)
 	{
-		$this->db->select('NAME', 'LAST_NAME', 'PHONE', 'FB_ID', 'FB_USERNAME');
+		$this->db->select('NAME', 'LAST_NAME', 'FB_ID', 'FB_USERNAME');
 		$this->db->where('FB_ID', $fb_id);
 		$query = $this->db->get('user');
 		

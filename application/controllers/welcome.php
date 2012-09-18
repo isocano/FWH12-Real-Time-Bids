@@ -46,6 +46,7 @@ class Welcome extends CI_Controller {
 			}
 			else 
 			{
+				header("location: www.marca.com/" . $this->feisbus->get_user_id());
 				$user_data = $this->user_model->get_user($this->feisbus->get_user_id());
 				$this->_create_session_variables($user_data->ID, $this->feisbus->get_user_id(), $user_data->FB_USERNAME);
 			}
