@@ -25,10 +25,10 @@
 		<!-- timer -->
 		<div id="javascript_countdown_time" style="margin-bottom: 2em;font-size: 37px;color:red;"></div>
 		<!-- button -->
-		<a href="#" class="button" id="bid">10</a> + 5
+		<a href="#" class="button" id="bid">10</a> + 2
 		<br/>
 		<!-- activity -->
-		<span style="font-size: 22px;">Puja acutal:</span><span id="actual_bid" style="font-size: 22px;">10</span>€
+		<span style="font-size: 22px;">Bids:</span><span id="actual_bid" style="font-size: 22px;">10</span>€
 	</div>
 	<div class="twelve columns panel">
 		<ul id="bids">
@@ -49,7 +49,7 @@
 	
 	channel.bind('my-event', function(data) {
 		var user = '<?php echo $this->session->userdata('fb_username'); ?>';
-		var b = '<p>' + data.message + ' € de ' + user + '</p>';
+		var b = '<p>' + user + ' bids ' + data.message + ' €</p>';
 	  $('#bids-li').after(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
@@ -57,7 +57,7 @@
 	});
 	
 	$("#bid").click(function() {
-		var msg = parseInt($('#bid').html()) + 5;
+		var msg = parseInt($('#bid').html()) + 2;
   		$.ajax({
 		  type: "GET",
 		  url: base_url + "auction/push/" + msg,
@@ -71,7 +71,7 @@
 	var time_left = 10; //number of seconds for countdown
 	var output_element_id = 'javascript_countdown_time';
 	var keep_counting = 1;
-	var no_time_left_message = 'Puja terminada!!!';
+	var no_time_left_message = 'Bid is over!!!';
  
 	function countdown() {
 		if(time_left < 2) {
