@@ -15,7 +15,6 @@ class User_model extends CI_Model {
 		$data = array(
 			'NAME'		=>	$name,
 			'LAST_NAME'	=>	$last_name,
-			'PHONE'		=>	$phone, 
 			'FB_ID'		=> 	$fb_id,
 			'FB_USERNAME'	=>	$username,
 		);
