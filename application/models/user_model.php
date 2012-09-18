@@ -36,6 +36,18 @@ class User_model extends CI_Model {
 		return $query->row();
 	}
 	
+	function is_user_registered($fb_id)
+	{
+		$this->db->select('FB_ID');
+		$this->db->where('FB_ID', $fb_id);
+		$query = $this->db->get('user');
+		
+		if ($query->row() != NULL)
+			return TRUE;
+		
+		return FALSE;
+	}
+	
 }
 
 /* End of file user_model.php */
