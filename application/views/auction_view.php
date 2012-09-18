@@ -53,7 +53,7 @@
 	
 	channel.bind('my-event', function(data) {
 		var user = '<?php echo $this->session->userdata('fb_username'); ?>';
-		var b = '<p>' + user + ' bids ' + data.message + ' €</p>';
+		var b = '<p>' + data.user + ' bids ' + data.message + ' €</p>';
 	  $('#bids-li').after(b);
 	  $('#actual_bid').html(data.message);
 	  $('#bid').html(data.message);
@@ -61,10 +61,11 @@
 	});
 	
 	$("#bid").click(function() {
+		var user = '<?php echo $this->session->userdata('fb_username'); ?>';
 		var msg = parseInt($('#bid').html()) + 2;
   		$.ajax({
 		  type: "GET",
-		  url: base_url + "auction/push/" + msg,
+		  url: base_url + "auction/push/" + msg + '/' + user,
 		}).done(function( msg ) {
 		});
 	});

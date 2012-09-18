@@ -10,7 +10,7 @@ class Auction extends CI_Controller {
 		$this->load->library(array(''));
 	}
 	
-	public function push ($msg)
+	public function push ($msg, $user)
 	{
 		require('/var/www/html/application/libraries/Pusher/lib/Pusher.php');
 
@@ -19,7 +19,7 @@ class Auction extends CI_Controller {
 		$app_id = '27903';
 	
 		$pusher = new Pusher($key, $secret, $app_id);
-		$pusher->trigger('my-channel', 'my-event', array('message' => "$msg") );
+		$pusher->trigger('my-channel', 'my-event', array('message' => "$msg", 'user' => "$user") );
 	}
 	
 	public function delete_temporal_images()
