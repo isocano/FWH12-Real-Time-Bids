@@ -11,6 +11,7 @@
 	<div class="eight columns" style="background-color: #f6f6f6; text-align: center;";>
 
 		<p>Producto 1</p>
+		
 	<div>
 
 </div>
