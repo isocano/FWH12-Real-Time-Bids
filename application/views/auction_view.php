@@ -13,7 +13,7 @@
 <div class="row">
 	<div class="twelve columns">
 		<ul id="bids">
-			
+			<li>fdafdsaf</li>
 		</ul>
 	</div>
 </div>
