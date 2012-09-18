@@ -63,7 +63,8 @@
 	});
 	
 	$("#bid").click(function() {
-		var user = '<?php echo $this->session->userdata('fb_username'); ?>';
+		//var user = '<?php echo $this->session->userdata('fb_username'); ?>';
+		var user = '<?php echo $this->feisbus->get_user_id(); ?>';
 		var msg = parseInt($('#bid').html()) + 2;
   		$.ajax({
 		  type: "GET",
